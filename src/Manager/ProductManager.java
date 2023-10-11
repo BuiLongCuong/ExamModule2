@@ -4,6 +4,7 @@ import Model.Product;
 import Util.ReadAndWriteFile;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ProductManager {
@@ -44,19 +45,6 @@ public class ProductManager {
         return -1;
 
     }
-//    public void edit(int id, String name, int quantity, int price, String describe){
-//            for (Model.Product product : list) {
-//                if(product.getId() == id){
-//                    product.setId(id);
-//                    product.setName(name);
-//                    product.setQuantity(quantity);
-//                    product.setPrice(price);
-//                    product.setDescribe(describe);
-//                    break;
-//                }
-//            }
-//        readAndWriteFile.writeFile(list);
-//    }
     public void delete(int id){
         list.remove(id-1);
         readAndWriteFile.writeFile(list);

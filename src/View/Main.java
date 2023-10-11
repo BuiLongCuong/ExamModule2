@@ -25,7 +25,7 @@ public class Main {
             System.out.println("3.Cập nhật.");
             System.out.println("4.Xóa.");
             System.out.println("5.Sắp xếp.");
-            System.out.println("6.Tìm sản phẩm có giá đắt nhất");
+            System.out.println("6.Tìm sản phẩm có giá đắt nhất.");
             System.out.println("9.Thoát.");
             choice = Validate.inputNumber();
             switch (choice) {
@@ -67,12 +67,10 @@ public class Main {
             System.out.println("1. Ấn Y để xóa.");
             System.out.println("2. Ấn một kí tự bất kì khác  để không xóa. ");
             input.nextLine();
-            choiceDelete = input.nextLine();
+            choiceDelete = Validate.inputString();
             if (choiceDelete.equals("Y")) {
                 productManager.delete(idDelete);
                 System.out.println("--------- Xóa thành công! ----------");
-            } else {
-                return;
             }
         } else {
             System.out.println("---------- Không có sản phẩm đó! ----------");
